@@ -66,3 +66,12 @@
     background-color: black;
   }
 }
+
+@keyframes animate-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,5 +1,5 @@
-import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
+import Technologies from "@/components/Technologies";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FaHome } from "react-icons/fa";
 
@@ -14,7 +14,7 @@ export default function Home() {
 
           <Hero/>
 
-          <Grid/>
+          <Technologies/>
       </div>
     </main>
   );
