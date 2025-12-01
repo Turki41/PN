@@ -30,6 +30,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -58,20 +59,26 @@
   }
 }
 
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     background-color: black;
   }
 }
 
-@keyframes animate-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.card::before {
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 30%);
+  content: '';
+  border-radius: inherit;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
