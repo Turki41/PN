@@ -7,9 +7,9 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 
 export const navItems = [
   { name: "About", link: "#about" },
+  { name: "Technologies", link: "#technologies" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
+  { name: "Education", link: "#education" },
 ];
 
 export const techStack: GridItem[] = [
@@ -33,9 +33,9 @@ export const techStack: GridItem[] = [
   },
   {
     id: 4,
-    title: "Express",
-    description: "Backend web framework for Node.js to build APIs and server logic",
-    icon: SiExpress,
+    title: "PostrgeSQL",
+    description: "Relational SQL database for structured data",
+    icon: BiLogoPostgresql,
   },
   {
     id: 5,
@@ -69,9 +69,9 @@ export const techStack: GridItem[] = [
   },
   {
     id: 10,
-    title: "PostgreSQL",
-    description: "Relational SQL database",
-    icon: BiLogoPostgresql,
+    title: "Express",
+    description: "backend framework",
+    icon: SiExpress,
   },
   {
     id: 11,

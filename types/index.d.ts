@@ -3,4 +3,5 @@ export interface GridItem {
     title: string,
     description: string,
     icon: React.ElementType,
+    color?: string
 }

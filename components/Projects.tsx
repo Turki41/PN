@@ -23,7 +23,7 @@ const Projects = () => {
 
             <div ref={ref} className="w-full h-full flex flex-wrap items-center justify-center p-4 gap-x-16 gap-y-24 mt-10">
                 {projects.map((project, index) => (
-                    <motion.div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} initial={{ opacity: 0, y: 10 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: index / 4, duration: 0.3 }} key={project.id} className="flex flex-col group relative card items-center max-sm:space-y-14 sm:justify-between rounded-2xl p-5 border w-[550px] min-h-[500px] bg-cover" style={{ backgroundImage: `url(${bg.src})` }}>
+                    <motion.div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} initial={{ opacity: 0, y: 10 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: index / 4, duration: 0.3 }} key={project.id} className="flex flex-col group relative card items-center max-sm:space-y-14 sm:justify-between rounded-2xl p-5 border w-[500px] min-h-[518px] bg-cover" style={{ backgroundImage: `url(${bg.src})` }}>
                         <div className="relative rounded-xl overflow-hidden md:h-64 z-10" >
                             <div className="">
                                 <img src={project.img} alt={project.title} className="rounded-xl object-center object-cover z-50" />
@@ -39,8 +39,7 @@ const Projects = () => {
                             <div className="flex items-center justify-between md:pt-10">
                                 <div className="flex">
                                     {project.iconLists.map((item, index) => (
-                                        <img key={index} src={item} alt={item} className="p-2 border rounded-full bg-black-100" style={{ transform: `translateX(-${index * 12}px)` }} />
-                                    ))}
+                                        <img key={index} src={item} alt={item} className="p-2 border border-white/20 rounded-full bg-black-100 transition-transform duration-300 [transform:translateX(var(--shift))] group-hover:[transform:translateX(0px)]" style={{ ["--shift" as any]: `-${index * 12}px` }} />))}
                                 </div>
 
                                 <div className="text-purple-400 hover:text-purple-300 transition-colors">
