@@ -1,4 +1,5 @@
 import EduCerts from "@/components/EduCerts";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
@@ -19,6 +20,8 @@ export default function Home() {
           <Projects/>
 
           <EduCerts/>
+
+          <Footer/>
       </div>
     </main>
   );

@@ -31,10 +31,10 @@ const EduCerts = () => {
 const Card = ({ title, sub, date, type }: { title: string, sub: string, date: string, type: 'Deg' | 'Cert' }) => {
     return (
         <div className="relative w-full h-full my-1">
-            <div className="h-[100%] w-0.5 absolute left-0.5 top-2 bg-gray-800/80 rounded-full" />
-            <div className="absolute -left-4 top-1.5 rounded-full px-2 py-3 bg-[#0C0E23]">
-                {type === 'Deg' && <RiGraduationCapFill className="text-purple-950 bg-[#0C0E23]" />}
-                {type === 'Cert' && <PiMedalBold className="text-purple-950 bg-[#0C0E23]" />}
+            <div className="h-[60%] w-0.5 absolute left-0.5 bottom-0 bg-gray-800/80 rounded-full" />
+            <div className="absolute max-sm:-left-[16px] -left-[16.5px] top-1.5 rounded-full px-2 py-3">
+                {type === 'Deg' && <RiGraduationCapFill className="text-purple-950 bg-transparent" />}
+                {type === 'Cert' && <PiMedalBold className="text-purple-950" />}
             </div>
 
             <div className="w-full pl-3 mt-6 mx-5">
