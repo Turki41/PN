@@ -84,36 +84,20 @@ export const techStack: GridItem[] = [
 
 export const projects = [
   {
-    id: '1',
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/metaversus.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    id: 1,
+    title: "ClipRoom",
+    des: "ClipRoom is a video recording and sharing platform for capturing, uploading, and managing screen recordings and video clips.",
+    img: "/cliproom.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/supabase.svg", "/postgresql.svg"],
+    link: "#",
   },
   {
-    id: '2',
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience witwwwwwwwwwwwwwwwwwwwwwwwwww jdowjd wj odjwo jwoidjwo jwdo ijh Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/noted.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
-  },
-  {
-    id: '3',
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/quiz-app.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
-  },
-  {
-    id: '4',
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/shoes-site.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    id: 2,
+    title: "Resumate",
+    des: "Resumate is an AI-powered resume analysis platform that helps job seekers optimize their resumes for ATS and recruiter screening.",
+    img: "/resumate.png",
+    iconLists: ["/next.svg", "/postgresql.svg", "/ts.svg", "/supabase.svg", "/tail.svg"],
+    link: "https://resumate-chi-fawn.vercel.app/",
   },
 ];
 

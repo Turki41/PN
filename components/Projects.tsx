@@ -6,6 +6,7 @@ import { useRef } from "react"
 import { FaLocationArrow } from "react-icons/fa"
 import bg from '../public/bg.png'
 import useMouseTracker from "@/hooks/useMouseTracker"
+import Image from "next/image"
 
 const Projects = () => {
     const ref = useRef<HTMLDivElement>(null)
@@ -39,14 +40,14 @@ const Projects = () => {
                             <div className="flex items-center justify-between md:pt-10">
                                 <div className="flex">
                                     {project.iconLists.map((item, index) => (
-                                        <img key={index} src={item} alt={item} className="p-2 border border-white/20 rounded-full bg-black-100 transition-transform duration-300 [transform:translateX(var(--shift))] group-hover:[transform:translateX(0px)]" style={{ ["--shift" as any]: `-${index * 12}px` }} />))}
+                                        <Image width={39} height={39} key={index} src={item} alt={item} className="p-2 border border-white/20 rounded-full bg-black-100 transition-transform duration-300 [transform:translateX(var(--shift))] group-hover:[transform:translateX(0px)]" style={{ ["--shift" as any]: `-${index * 12}px` }} />))}
                                 </div>
 
                                 <div className="text-purple-400 hover:text-purple-300 transition-colors">
-                                    <a target="_blank" href={project.link} className="flex gap-3 items-center">
-                                        <p className="hidden sm:block text-xl">View Live Site</p>
+                                    <button disabled={project.id == 1 ? true : false} onClick={() => window.open(project.link, "_blank")} className="flex gap-3 items-center">
+                                        {project.id == 1 ? <p className="sm:block text-xl">In Progress...</p>:<p className="sm:block text-xl">View Live Site</p>}
                                         <FaLocationArrow className="max-sm:ml-12 md:mt-1.5 md:mr-2 size-5" />
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
