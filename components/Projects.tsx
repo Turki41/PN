@@ -19,7 +19,7 @@ const Projects = () => {
 
             <div className="w-full flex flex-col items-center justify-center text-center">
                 <motion.h2 initial={{ opacity: 0, y: 10 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0, duration: 0.3 }} className="text-3xl font-bold text-blue-100 mb-6">Projects I Made</motion.h2>
-                <motion.p initial={{ opacity: 0, y: 10 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.2, duration: 0.3 }} className="text-gray-500 mb-10 max-w-2xl">Here are some of the projects i worked on</motion.p>
+                <motion.p initial={{ opacity: 0, y: 10 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.2, duration: 0.3 }} className="text-gray-500 mb-10 max-w-2xl">Here are some of the projects i built</motion.p>
             </div>
 
             <div ref={ref} className="w-full h-full flex flex-wrap items-center justify-center p-4 sm:gap-x-16 gap-y-10 sm:gap-y-24 mt-10">
@@ -37,7 +37,8 @@ const Projects = () => {
                                 <p className="text-gray-300/80 text-base line-clamp-3 flex-1 h-full">{project.des}</p>
                             </div>
 
-                            <div className="flex items-center justify-between md:pt-10">
+                        
+                            <div className="flex w-full items-center justify-between md:pt-10">
                                 <div className="flex">
                                     {project.iconLists.map((item, index) => (
                                         <Image width={39} height={39} key={index} src={item} alt={item} className="p-2 border border-white/20 rounded-full bg-black-100 transition-transform duration-300 [transform:translateX(var(--shift))] group-hover:[transform:translateX(0px)]" style={{ ["--shift" as any]: `-${index * 12}px` }} />))}
@@ -46,7 +47,7 @@ const Projects = () => {
                                 <div className="text-purple-400 hover:text-purple-300 transition-colors">
                                     <button disabled={project.id == 1 ? true : false} onClick={() => window.open(project.link, "_blank")} className="flex gap-3 items-center">
                                         {project.id == 1 ? <p className="sm:block text-xl">In Progress...</p>:<p className="sm:block text-xl">View Live Site</p>}
-                                        <FaLocationArrow className="max-sm:ml-12 md:mt-1.5 md:mr-2 size-5" />
+                                        <FaLocationArrow className="max-sm:ml-12 max-sm:hidden md:mt-1.5 md:mr-2 size-5" />
                                     </button>
                                 </div>
                             </div>

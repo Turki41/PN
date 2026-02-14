@@ -97,7 +97,7 @@ export const projects = [
     des: "Resumate is an AI-powered resume analysis platform that helps job seekers optimize their resumes for ATS and recruiter screening.",
     img: "/resumate.png",
     iconLists: ["/next.svg", "/postgresql.svg", "/ts.svg", "/supabase.svg", "/tail.svg"],
-    link: "https://resumate-chi-fawn.vercel.app/",
+    link: "https://resumate.portfo.app/",
   },
 ];
 
