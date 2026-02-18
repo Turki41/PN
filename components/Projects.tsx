@@ -37,7 +37,7 @@ const Projects = () => {
                                 <p className="text-gray-300/80 text-base line-clamp-3 flex-1 h-full">{project.des}</p>
                             </div>
 
-                        
+
                             <div className="flex w-full items-center justify-between md:pt-10">
                                 <div className="flex">
                                     {project.iconLists.map((item, index) => (
@@ -45,8 +45,8 @@ const Projects = () => {
                                 </div>
 
                                 <div className="text-purple-400 hover:text-purple-300 transition-colors">
-                                    <button disabled={project.id == 1 ? true : false} onClick={() => window.open(project.link, "_blank")} className="flex gap-3 items-center">
-                                        {project.id == 1 ? <p className="sm:block text-xl">In Progress...</p>:<p className="sm:block text-xl">View Live Site</p>}
+                                    <button onClick={() => window.open(project.link, "_blank")} className="flex gap-3 items-center">
+                                        <p className="sm:block text-xl">View Live Site</p>
                                         <FaLocationArrow className="max-sm:ml-12 max-sm:hidden md:mt-1.5 md:mr-2 size-5" />
                                     </button>
                                 </div>

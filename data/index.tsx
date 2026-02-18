@@ -89,7 +89,7 @@ export const projects = [
     des: "ClipRoom is a video recording and sharing platform for capturing, uploading, and managing screen recordings and video clips.",
     img: "/cliproom.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/supabase.svg", "/postgresql.svg"],
-    link: "#",
+    link: "https://cliproom.portfo.app/",
   },
   {
     id: 2,
