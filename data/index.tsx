@@ -99,6 +99,14 @@ export const projects = [
     iconLists: ["/next.svg", "/postgresql.svg", "/ts.svg", "/supabase.svg", "/tail.svg"],
     link: "https://resumate.portfo.app/",
   },
+  {
+    id: 3,
+    title: "Cloud Architecture",
+    des: "A cloud architecture app for serverless scalable feedback management. By integrating multiple AWS core services: S3, CloudFront, API Gateway, Lambda, DynamoDB and SES.",
+    img: "/c1-architecture.png",
+    iconLists: ["/re.svg", "/aws.svg", "/ts.svg", "/css3.svg"],
+    link: "https://d1i8ekd7oglcf.cloudfront.net/",
+  },
 ];
 
 
