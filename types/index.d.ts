@@ -5,3 +5,9 @@ export interface GridItem {
     icon: React.ElementType,
     color?: string
 }
+
+interface HeroContentProps {
+    fullName: string,
+    title: string,
+    summary: string
+}
