@@ -11,3 +11,12 @@ interface HeroContentProps {
     title: string,
     summary: string
 }
+
+interface Project {
+    id: number,
+    title: string,
+    description: string,
+    image: string,
+    icon_list: string[],
+    link: string
+}

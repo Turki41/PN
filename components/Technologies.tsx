@@ -2,14 +2,19 @@
 
 import { techStack } from "@/data"
 import { GridItem } from "@/types"
-import grid from '../public/grid.svg'
 import { motion, useInView } from 'motion/react'
 import { useRef } from "react"
 import useMouseTracker from "@/hooks/useMouseTracker"
+import { useMediaQuery } from "@/hooks/useMediaQuery"
 
 const Technologies = () => {
     const cardRef = useRef<HTMLDivElement>(null)
-    const isInView = useInView(cardRef, { once: true, margin: '200px' })
+    const isLargeScreen = useMediaQuery("(min-width: 1024px)");
+
+    const isInView = useInView(cardRef, {
+        once: true,
+        margin: isLargeScreen ? "300px" : "700px",
+    });
 
     const { handleMouseMove, handleMouseLeave } = useMouseTracker()
 
@@ -26,7 +31,7 @@ const Technologies = () => {
                 <div className={'max-w-7xl gap-2 max-h-screen grid md:grid-cols-4 md:grid-rows-5 lg:grid-cols-4 lg:grid-rows-4'}>
                     {techStack.map((tech: GridItem) => (
                         <motion.div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} ref={cardRef} initial={{ opacity: 0, y: 10 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: tech.id / 5, duration: 0.3 }} key={tech.id} className={`card bg-slate-900/10 flex flex-col overflow-hidden items-center rounded-xl border p-6 relative group ${tech.id === 1 && 'col-span-2 row-span-2'} ${(tech.id === 4 || tech.id === 5) && 'col-span-2'}`}>
-                            
+
                             <div className={`flex w-full h-full z-10 ${tech.id === 1 ? 'justify-between' : ''} ${(tech.id === 4 || tech.id === 5) ? 'flex-row gap-5' : 'flex-col'} items-center gap-2`}>
                                 <div className={` w-full flex-1 flex  ${(tech.id === 11 || tech.id === 1 || tech.id === 4 || tech.id === 5) ? 'text-blue-500' : 'text-white'} ${(tech.id === 1 || tech.id === 4 || tech.id === 5) ? '' : 'justify-center'}`}>
                                     <tech.icon size='25' />
